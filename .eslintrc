@@ -1,6 +1,12 @@
 {
   "extends": "airbnb",
   "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": ["@babel/preset-react"]
+    }
+  },
   "env": {
     "browser": true,
     "node": true,
@@ -8,7 +14,7 @@
   },
   "rules": {
     "max-len": ["error", { "code": 500 }],
-    "linebreak-style": ["error", "windows"],
+    "linebreak-style": 0,
     "jsx-a11y/anchor-is-valid": ["error", {
       "components": ["Link"],
       "specialLink": ["to", "hrefLeft", "hrefRight"],
