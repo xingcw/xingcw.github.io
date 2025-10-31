@@ -12,10 +12,10 @@ const publications = [
     other: 'Arxiv. (2022).',
   },
   {
-    author: 'Balz Maag, Pengcheng Huang, Thanikesavan Sivanthi, and Chunwei Xing.',
-    title: 'Chronos: A Developers\' Framework for Early Timing Prediction and Real-time System Testing.',
-    link: '',
-    other: '',
+    author: 'Pengcheng Huang, Balz Maag, Thanikesavan Sivanthi, and Chunwei Xing. ',
+    title: 'Work in progress: Early timing prediction of real-time tasks in continuous integration environments.',
+    link: 'https://ieeexplore.ieee.org/abstract/document/10568047',
+    other: 'RTAS. (2024)',
   },
 ];
 

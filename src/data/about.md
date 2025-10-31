@@ -1,7 +1,7 @@
 
 # Intro
 
-I'm currently a first-year PhD student at [Janus Intelligent Robots Lab (JIRL)](https://jirl-upenn.github.io/), University of Pennsylvania. I am advised by [Prof. Antonio Loquercio](https://antonilo.github.io/).
+I'm currently a second-year PhD student at [Janus Intelligent Robots Lab (JIRL)](https://jirl-upenn.github.io/), University of Pennsylvania. I am advised by [Prof. Antonio Loquercio](https://antonilo.github.io/).
 
 Before joining JIRL, I was a Research Assistant at [RPG](https://rpg.ifi.uzh.ch/) dierected
 by [Prof. Davide Scaramuzza](https://rpg.ifi.uzh.ch/people_scaramuzza.html) at University of Zurich. 

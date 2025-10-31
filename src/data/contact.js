@@ -40,7 +40,7 @@ const data = [
     icon: faInstagram,
   },
   {
-    link: 'https://scholar.google.com/citations?user=lUCbGrEAAAAJ&hl=en',
+    link: 'https://scholar.google.com/citations?user=eJnQQQcAAAAJ&hl=en',
     label: 'Google Scholar',
     icon: faGraduationCap,
   },

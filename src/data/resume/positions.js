@@ -1,9 +1,27 @@
 const positions = [
   {
+    company: 'Janus Intelligent Robots Lab, University of Pennsylvania',
+    position: 'PhD Student',
+    link: 'https://jirl-upenn.github.io/',
+    daterange: 'Aug. 2024 - Present',
+    points: [
+      'Working on generative models and weight-space learning.',
+    ],
+  },
+  {
+    company: 'BOSS Zhipin Inc.',
+    position: 'LLM Research Engineer',
+    link: 'https://bosszhipin.com/',
+    daterange: 'Feb. 2024 - Aug. 2024',
+    points: [
+      'Worked on the online recruitment chatbot development using LLM and RAG.',
+    ],
+  },
+  {
     company: 'Robotics and Perception Group, University of Zurich',
     position: 'Master Thesis Student',
     link: 'https://rpg.ifi.uzh.ch/',
-    daterange: 'Dec. 2022 - Present',
+    daterange: 'Dec. 2022 - Nov. 2023',
     points: [
       'Achieved comparable racing performance with onboard vision-only inputs (gate corners).',
       'Improved data collecting efficiency and achieved generalizable performances for the imitation learning framework.',
