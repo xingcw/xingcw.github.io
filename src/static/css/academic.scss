@@ -291,12 +291,14 @@
     .links {
       justify-content: center;
     }
-    /* bio separated from the header and left-aligned for reading */
+    /* bio separated from the header, justified (two edges aligned) */
     .intro__bio {
       margin-top: 22px;
       padding-top: 20px;
       border-top: 1px solid var(--rule);
-      text-align: left;
+      text-align: justify;
+      -webkit-hyphens: auto;
+      hyphens: auto;
     }
 
     .section {
@@ -328,9 +330,10 @@
       padding-right: 0;
     }
 
-    /* publication image stacks above its text, full width */
+    /* publication: media + text stacked and centered */
     .pub {
       flex-direction: column;
+      align-items: center;
       gap: 12px;
       margin-bottom: 26px;
     }
@@ -338,6 +341,12 @@
       flex: 0 0 auto;
       width: 100%;
       max-width: 320px;
+    }
+    .pub__body {
+      text-align: center;
+    }
+    .pub__links a {
+      margin: 0 6px;
     }
 
     .theme-toggle {
