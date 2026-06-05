@@ -269,26 +269,68 @@
 
   /* ---------- Responsive ---------- */
   @media (max-width: 600px) {
-    padding: 32px 18px 64px;
+    padding: 36px 18px 64px;
+    font-size: 15px;
 
+    .intro {
+      margin-bottom: 24px;
+    }
     .intro__photo {
       float: none;
       width: 150px;
-      margin: 0 0 16px;
+      margin: 0 0 18px;
     }
-    .pub {
-      flex-direction: column;
-      gap: 12px;
+    .intro__name {
+      font-size: 27px;
     }
-    .pub__media {
-      flex-basis: auto;
-      width: 100%;
-      max-width: 320px;
+    .intro__bio {
+      margin-top: 0;
     }
+
+    .section {
+      margin-top: 36px;
+    }
+    .section__title {
+      font-size: 18px;
+    }
+
+    /* stack each row vertically; the date sits on its own line above */
     .cv-row,
     .news li {
       flex-direction: column;
-      gap: 2px;
+      gap: 1px;
+      margin-bottom: 14px;
+    }
+    /* key fix: drop the fixed column width so it doesn't become a fixed
+       HEIGHT once the flex axis is vertical */
+    .news__date,
+    .cv-row__when {
+      flex: 0 0 auto;
+      font-size: 13px;
+    }
+
+    /* let News grow naturally instead of an inner scroll box on mobile */
+    .news {
+      max-height: none;
+      overflow: visible;
+      padding-right: 0;
+    }
+
+    /* publication image stacks above its text, full width */
+    .pub {
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+    .pub__media {
+      flex: 0 0 auto;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .theme-toggle {
+      top: 14px;
+      right: 14px;
     }
   }
 }
