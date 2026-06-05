@@ -1,0 +1,294 @@
+/* =========================================================
+   Minimal academic single-page style (Jon Barron–like).
+   All rules are scoped under `.academic` so they do not
+   collide with the existing site's global styles.
+   ========================================================= */
+
+.academic {
+  --ink: #1a1a1a;
+  --muted: #666;
+  --link: #1565c0;
+  --rule: #e6e6e6;
+  --bg: #ffffff;
+  --card: #f4f4f5;
+
+  &[data-theme='dark'] {
+    --ink: #f0f0f2;
+    --muted: #b9bac1;
+    --link: #8ab4ff;
+    --rule: #34343a;
+    --bg: #16171a;
+    --card: #232428;
+  }
+
+  position: relative;
+  min-height: 100vh;
+
+  /* full-viewport background that follows the theme variable */
+  &::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: var(--bg);
+  }
+
+  box-sizing: border-box;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 56px 24px 96px;
+  color: var(--ink);
+  background: var(--bg);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* one font family + consistent weights/sizes everywhere, so neither the
+     global theme nor markdown-rendered content introduces a different face */
+  h1, h2, h3, h4, h5, h6,
+  p, span, a, li, ul, ol, em, i, strong, b {
+    font-family: inherit;
+    letter-spacing: inherit;
+    text-transform: none;
+  }
+  p, span, a, li, em, i, strong, b {
+    font-size: inherit;
+    line-height: inherit;
+  }
+  ul, ol {
+    margin: 0;
+  }
+
+  a {
+    color: var(--link);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* ---------- Header / intro (photo floats, text wraps) ---------- */
+  .intro {
+    margin-bottom: 28px;
+  }
+  .intro::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .intro__photo {
+    float: right;
+    width: 190px;
+    margin: 4px 0 14px 32px;
+  }
+  .intro__photo img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+  }
+  .intro__name {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 6px;
+  }
+  .intro__role {
+    color: var(--muted);
+    margin: 0 0 16px;
+  }
+
+  /* ---------- Bio (wraps around the floated photo) ---------- */
+  .intro__bio {
+    margin-top: 16px;
+  }
+  .intro__bio p {
+    margin: 0 0 14px;
+  }
+  .intro__bio p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ---------- Social / link row ---------- */
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 15px;
+  }
+  .links a {
+    color: var(--muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .links a:hover {
+    color: var(--link);
+  }
+  .links svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* ---------- Section ---------- */
+  .section {
+    margin-top: 48px;
+  }
+  .section__title {
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    padding-bottom: 8px;
+    margin: 0 0 20px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* ---------- News ---------- */
+  .news {
+    max-height: 230px;
+    overflow-y: auto;
+    padding-right: 8px;
+  }
+  .news ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .news li {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  .news__date {
+    flex: 0 0 92px;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ---------- Publications ---------- */
+  .pub {
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+    margin-bottom: 28px;
+  }
+  .pub__media {
+    flex: 0 0 200px;
+    width: 200px;
+  }
+  .pub__media img {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--rule);
+    display: block;
+  }
+  .pub__title {
+    font-weight: 600;
+    margin: 0 0 4px;
+  }
+  .pub__authors {
+    color: var(--ink);
+    margin: 0 0 4px;
+    font-size: 15px;
+  }
+  .pub__authors .me {
+    font-weight: 700;
+  }
+  .pub__venue {
+    color: var(--muted);
+    font-style: italic;
+    font-size: 15px;
+    margin: 0 0 6px;
+  }
+  .pub__links {
+    font-size: 14px;
+  }
+  .pub__links a {
+    margin-right: 12px;
+  }
+
+  /* ---------- CV blocks ---------- */
+  .cv-row {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 14px;
+    font-size: 15px;
+  }
+  .cv-row__when {
+    flex: 0 0 130px;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .cv-row__what {
+    flex: 1 1 auto;
+  }
+  .cv-row__what .where {
+    font-weight: 600;
+  }
+  .cv-row__what .sub {
+    color: var(--muted);
+  }
+
+  .more-link {
+    font-size: 15px;
+    margin-top: 18px;
+  }
+
+  /* ---------- Theme toggle (bare icon) ---------- */
+  .theme-toggle {
+    position: fixed;
+    top: 22px;
+    right: 24px;
+    z-index: 10;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    box-shadow: none;
+    height: auto;
+    line-height: 1;
+    padding: 6px;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 20px;
+    transition: color 0.15s ease;
+  }
+  .theme-toggle:hover {
+    color: var(--ink);
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 600px) {
+    padding: 32px 18px 64px;
+
+    .intro__photo {
+      float: none;
+      width: 150px;
+      margin: 0 0 16px;
+    }
+    .pub {
+      flex-direction: column;
+      gap: 12px;
+    }
+    .pub__media {
+      flex-basis: auto;
+      width: 100%;
+      max-width: 320px;
+    }
+    .cv-row,
+    .news li {
+      flex-direction: column;
+      gap: 2px;
+    }
+  }
+}
